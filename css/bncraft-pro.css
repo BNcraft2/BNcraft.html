@@ -1,0 +1,1153 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800;900&family=Exo+2:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&family=Orbitron:wght@500;700;800;900&family=Poppins:wght@400;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap');
+
+:root {
+    --accent-rgb: 0, 229, 255;
+    --pro-surface: rgba(255,255,255,0.065);
+    --pro-surface-strong: rgba(255,255,255,0.105);
+    --pro-ink-soft: rgba(255,255,255,0.72);
+    --pro-shadow: 0 18px 48px rgba(0,0,0,0.34);
+    --pro-shadow-soft: 0 10px 28px rgba(0,0,0,0.24);
+    --pro-radius: 8px;
+}
+
+[data-theme="blue"] { --accent-rgb: 0, 229, 255; }
+[data-theme="purple"] { --accent-rgb: 191, 0, 255; }
+[data-theme="red"] { --accent-rgb: 255, 34, 34; }
+[data-theme="green"] { --accent-rgb: 0, 255, 136; }
+[data-theme="yellow"] { --accent-rgb: 255, 224, 0; }
+[data-theme="orange"] { --accent-rgb: 255, 140, 0; }
+[data-theme="white"] { --accent-rgb: 0, 119, 204; --pro-surface: rgba(0,0,0,0.045); --pro-surface-strong: rgba(0,0,0,0.075); --pro-ink-soft: rgba(0,0,0,0.68); --pro-shadow: 0 18px 48px rgba(20,45,70,0.16); --pro-shadow-soft: 0 10px 28px rgba(20,45,70,0.12); }
+[data-theme="grayscale"] { --accent-rgb: 224, 224, 224; }
+[data-theme="pink"] { --accent-rgb: 255, 105, 180; }
+
+[data-theme="aurora"] {
+    --bg-dark: #061112;
+    --card-bg: #0c1d1e;
+    --accent: #72ffd2;
+    --accent-rgb: 114, 255, 210;
+    --modal-bg: #081719;
+    --glow: 0 0 24px rgba(114,255,210,0.34);
+    --text-main: #f5fffb;
+    --text-sub: rgba(245,255,251,0.82);
+    --text-label: rgba(245,255,251,0.55);
+    --nav-bg: rgba(6,17,18,0.94);
+    --grid-color: rgba(114,255,210,0.035);
+    --border-color: rgba(114,255,210,0.22);
+    --border-hover: rgba(114,255,210,0.78);
+    --info-card-bg: rgba(255,255,255,0.05);
+    --desc-bg: rgba(0,0,0,0.22);
+    --menu-item-hover: rgba(114,255,210,0.1);
+}
+
+[data-theme="cyber"] {
+    --bg-dark: #070912;
+    --card-bg: #101322;
+    --accent: #37f7ff;
+    --accent-rgb: 55, 247, 255;
+    --modal-bg: #0c0f1d;
+    --glow: 0 0 24px rgba(55,247,255,0.36);
+    --text-main: #f8fbff;
+    --text-sub: rgba(248,251,255,0.82);
+    --text-label: rgba(248,251,255,0.55);
+    --nav-bg: rgba(7,9,18,0.95);
+    --grid-color: rgba(55,247,255,0.04);
+    --border-color: rgba(55,247,255,0.22);
+    --border-hover: rgba(255,70,214,0.8);
+    --info-card-bg: rgba(255,255,255,0.055);
+    --desc-bg: rgba(0,0,0,0.24);
+    --menu-item-hover: rgba(255,70,214,0.1);
+}
+
+[data-theme="emerald"] {
+    --bg-dark: #06110b;
+    --card-bg: #0d1f14;
+    --accent: #6dff83;
+    --accent-rgb: 109, 255, 131;
+    --modal-bg: #09180f;
+    --glow: 0 0 24px rgba(109,255,131,0.34);
+    --text-main: #f5fff7;
+    --text-sub: rgba(245,255,247,0.82);
+    --text-label: rgba(245,255,247,0.55);
+    --nav-bg: rgba(6,17,11,0.95);
+    --grid-color: rgba(109,255,131,0.035);
+    --border-color: rgba(109,255,131,0.22);
+    --border-hover: rgba(109,255,131,0.78);
+    --info-card-bg: rgba(255,255,255,0.05);
+    --desc-bg: rgba(0,0,0,0.23);
+    --menu-item-hover: rgba(109,255,131,0.1);
+}
+
+[data-theme="volcano"] {
+    --bg-dark: #120906;
+    --card-bg: #21110c;
+    --accent: #ff6b35;
+    --accent-rgb: 255, 107, 53;
+    --modal-bg: #190c08;
+    --glow: 0 0 24px rgba(255,107,53,0.36);
+    --text-main: #fff8f4;
+    --text-sub: rgba(255,248,244,0.82);
+    --text-label: rgba(255,248,244,0.55);
+    --nav-bg: rgba(18,9,6,0.95);
+    --grid-color: rgba(255,107,53,0.035);
+    --border-color: rgba(255,107,53,0.23);
+    --border-hover: rgba(255,205,75,0.75);
+    --info-card-bg: rgba(255,255,255,0.052);
+    --desc-bg: rgba(0,0,0,0.25);
+    --menu-item-hover: rgba(255,205,75,0.1);
+}
+
+[data-theme="ice"] {
+    --bg-dark: #eef7ff;
+    --card-bg: #ffffff;
+    --accent: #168fff;
+    --accent-rgb: 22, 143, 255;
+    --modal-bg: #f7fbff;
+    --glow: 0 0 24px rgba(22,143,255,0.22);
+    --text-main: #102033;
+    --text-sub: rgba(16,32,51,0.74);
+    --text-label: rgba(16,32,51,0.52);
+    --nav-bg: rgba(238,247,255,0.96);
+    --grid-color: rgba(22,143,255,0.06);
+    --border-color: rgba(22,143,255,0.2);
+    --border-hover: rgba(22,143,255,0.75);
+    --info-card-bg: rgba(0,0,0,0.04);
+    --desc-bg: rgba(0,0,0,0.04);
+    --menu-item-hover: rgba(22,143,255,0.09);
+    --pro-surface: rgba(0,0,0,0.045);
+    --pro-surface-strong: rgba(0,0,0,0.075);
+    --pro-ink-soft: rgba(16,32,51,0.7);
+}
+
+[data-theme="sunset"] {
+    --bg-dark: #100b12;
+    --card-bg: #201524;
+    --accent: #ffb45c;
+    --accent-rgb: 255, 180, 92;
+    --modal-bg: #180f1c;
+    --glow: 0 0 24px rgba(255,180,92,0.34);
+    --text-main: #fff8f0;
+    --text-sub: rgba(255,248,240,0.82);
+    --text-label: rgba(255,248,240,0.56);
+    --nav-bg: rgba(16,11,18,0.95);
+    --grid-color: rgba(255,180,92,0.035);
+    --border-color: rgba(255,180,92,0.22);
+    --border-hover: rgba(255,105,180,0.78);
+    --info-card-bg: rgba(255,255,255,0.055);
+    --desc-bg: rgba(0,0,0,0.24);
+    --menu-item-hover: rgba(255,105,180,0.1);
+}
+
+[data-theme="royal"] {
+    --bg-dark: #090913;
+    --card-bg: #131323;
+    --accent: #b9a8ff;
+    --accent-rgb: 185, 168, 255;
+    --modal-bg: #0e0e1d;
+    --glow: 0 0 24px rgba(185,168,255,0.34);
+    --text-main: #fbfaff;
+    --text-sub: rgba(251,250,255,0.82);
+    --text-label: rgba(251,250,255,0.56);
+    --nav-bg: rgba(9,9,19,0.95);
+    --grid-color: rgba(185,168,255,0.035);
+    --border-color: rgba(185,168,255,0.24);
+    --border-hover: rgba(255,218,120,0.78);
+    --info-card-bg: rgba(255,255,255,0.055);
+    --desc-bg: rgba(0,0,0,0.24);
+    --menu-item-hover: rgba(255,218,120,0.1);
+}
+
+[data-theme="matrix"] {
+    --bg-dark: #020806;
+    --card-bg: #07140f;
+    --accent: #22ff66;
+    --accent-rgb: 34, 255, 102;
+    --modal-bg: #04100b;
+    --glow: 0 0 24px rgba(34,255,102,0.32);
+    --text-main: #edfff2;
+    --text-sub: rgba(237,255,242,0.8);
+    --text-label: rgba(237,255,242,0.5);
+    --nav-bg: rgba(2,8,6,0.96);
+    --grid-color: rgba(34,255,102,0.04);
+    --border-color: rgba(34,255,102,0.22);
+    --border-hover: rgba(34,255,102,0.78);
+    --info-card-bg: rgba(255,255,255,0.045);
+    --desc-bg: rgba(0,0,0,0.3);
+    --menu-item-hover: rgba(34,255,102,0.1);
+}
+
+[data-theme="candy"] {
+    --bg-dark: #fff5fb;
+    --card-bg: #ffffff;
+    --accent: #f04fa8;
+    --accent-rgb: 240, 79, 168;
+    --modal-bg: #fffafd;
+    --glow: 0 0 24px rgba(240,79,168,0.22);
+    --text-main: #23121d;
+    --text-sub: rgba(35,18,29,0.74);
+    --text-label: rgba(35,18,29,0.52);
+    --nav-bg: rgba(255,245,251,0.96);
+    --grid-color: rgba(240,79,168,0.055);
+    --border-color: rgba(240,79,168,0.2);
+    --border-hover: rgba(0,160,210,0.7);
+    --info-card-bg: rgba(0,0,0,0.04);
+    --desc-bg: rgba(0,0,0,0.04);
+    --menu-item-hover: rgba(0,160,210,0.08);
+    --pro-surface: rgba(0,0,0,0.045);
+    --pro-surface-strong: rgba(0,0,0,0.075);
+    --pro-ink-soft: rgba(35,18,29,0.7);
+}
+
+[data-theme="midnight"] {
+    --bg-dark: #030916;
+    --card-bg: #0b1426;
+    --accent: #7cc7ff;
+    --accent-rgb: 124, 199, 255;
+    --modal-bg: #071020;
+    --glow: 0 0 24px rgba(124,199,255,0.34);
+    --text-main: #f4f9ff;
+    --text-sub: rgba(244,249,255,0.82);
+    --text-label: rgba(244,249,255,0.54);
+    --nav-bg: rgba(3,9,22,0.96);
+    --grid-color: rgba(124,199,255,0.035);
+    --border-color: rgba(124,199,255,0.22);
+    --border-hover: rgba(160,255,210,0.75);
+    --info-card-bg: rgba(255,255,255,0.052);
+    --desc-bg: rgba(0,0,0,0.26);
+    --menu-item-hover: rgba(160,255,210,0.1);
+}
+
+[data-font="display"] body,
+[data-font="display"] input,
+[data-font="display"] button,
+[data-font="display"] select { font-family: 'Orbitron', 'Inter', sans-serif !important; }
+[data-font="tech"] body,
+[data-font="tech"] input,
+[data-font="tech"] button,
+[data-font="tech"] select { font-family: 'Rajdhani', 'Inter', sans-serif !important; }
+[data-font="headline"] body,
+[data-font="headline"] input,
+[data-font="headline"] button,
+[data-font="headline"] select { font-family: 'Exo 2', 'Inter', sans-serif !important; }
+[data-font="clean"] body,
+[data-font="clean"] input,
+[data-font="clean"] button,
+[data-font="clean"] select { font-family: 'Poppins', 'Inter', sans-serif !important; }
+[data-font="condensed"] body,
+[data-font="condensed"] input,
+[data-font="condensed"] button,
+[data-font="condensed"] select { font-family: 'Barlow', 'Inter', sans-serif !important; }
+[data-font="code"] body,
+[data-font="code"] input,
+[data-font="code"] button,
+[data-font="code"] select { font-family: 'JetBrains Mono', 'Space Mono', monospace !important; }
+
+.font-opt[data-f="display"] { font-family: 'Orbitron', sans-serif; }
+.font-opt[data-f="tech"] { font-family: 'Rajdhani', sans-serif; font-size: 15px; }
+.font-opt[data-f="headline"] { font-family: 'Exo 2', sans-serif; }
+.font-opt[data-f="clean"] { font-family: 'Poppins', sans-serif; }
+.font-opt[data-f="condensed"] { font-family: 'Barlow', sans-serif; }
+.font-opt[data-f="code"] { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+
+.theme-dot[data-t="aurora"] { background: linear-gradient(135deg, #72ffd2, #335cff 52%, #091c22); }
+.theme-dot[data-t="cyber"] { background: linear-gradient(135deg, #37f7ff, #ff46d6 52%, #070912); }
+.theme-dot[data-t="emerald"] { background: linear-gradient(135deg, #6dff83, #0b5f39 54%, #06110b); }
+.theme-dot[data-t="volcano"] { background: linear-gradient(135deg, #ffcd4b, #ff6b35 55%, #180804); }
+.theme-dot[data-t="ice"] { background: linear-gradient(135deg, #ffffff, #7cc7ff 55%, #dcefff); border-color: #b9dfff; }
+.theme-dot[data-t="sunset"] { background: linear-gradient(135deg, #ffb45c, #ff69b4 58%, #100b12); }
+.theme-dot[data-t="royal"] { background: linear-gradient(135deg, #b9a8ff, #ffda78 56%, #080814); }
+.theme-dot[data-t="matrix"] { background: linear-gradient(135deg, #22ff66, #0b4d22 56%, #020806); }
+.theme-dot[data-t="candy"] { background: linear-gradient(135deg, #fff, #f04fa8 52%, #63d8ff); border-color: #ffc7e5; }
+.theme-dot[data-t="midnight"] { background: linear-gradient(135deg, #7cc7ff, #a0ffd2 52%, #030916); }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-feature-settings: "kern" 1, "liga" 1;
+    text-rendering: optimizeLegibility;
+}
+
+body::after {
+    background:
+        linear-gradient(120deg, rgba(var(--accent-rgb),0.11), transparent 28%, transparent 72%, rgba(255,255,255,0.04)),
+        linear-gradient(180deg, transparent, rgba(0,0,0,0.14)) !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    animation: none !important;
+}
+
+body, button, input, select, textarea {
+    letter-spacing: 0 !important;
+}
+
+nav {
+    border-bottom-color: rgba(var(--accent-rgb),0.24) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.nav-logo-img {
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.nav-logo-img:hover {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.hamburger-menu,
+.settings-panel,
+.modal-content,
+.install-card,
+.faq-card,
+.mod-card,
+.promo-card,
+.featured-card,
+.discord-card,
+.social-tile,
+.email-card,
+.info-card,
+.dl-option,
+.v-btn {
+    border-radius: var(--pro-radius) !important;
+}
+
+.hamburger-menu,
+.settings-panel,
+.modal-content {
+    box-shadow: var(--pro-shadow) !important;
+}
+
+.menu-item,
+.nav-btn,
+.hero-btn,
+.dl-trigger,
+.reset-defaults-btn,
+.font-opt,
+.platform-tab,
+.search-go-btn,
+.search-mode-btn {
+    border-radius: var(--pro-radius) !important;
+}
+
+.hero-title,
+.header-title,
+.help-hero h1,
+.profile-name,
+.m-title,
+.modal-title {
+    letter-spacing: 0 !important;
+}
+
+.hero-title {
+    font-size: 3.35rem !important;
+    line-height: 1.02 !important;
+}
+
+.help-hero h1,
+.header-title {
+    font-size: 2.85rem !important;
+    line-height: 1.05 !important;
+}
+
+.hero-subtitle,
+.help-hero p,
+.profile-tag {
+    color: var(--pro-ink-soft) !important;
+}
+
+.mod-card,
+.promo-card,
+.featured-card,
+.discord-card,
+.social-tile,
+.email-card,
+.install-card,
+.faq-card,
+.info-card {
+    background:
+        linear-gradient(180deg, var(--pro-surface), rgba(255,255,255,0.025)),
+        var(--card-bg) !important;
+    border-color: rgba(var(--accent-rgb),0.2) !important;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset;
+}
+
+.mod-card:hover,
+.promo-card:hover,
+.featured-card:hover,
+.discord-card:hover,
+.social-tile:hover,
+.email-card:hover,
+.install-card:hover,
+.faq-card:hover {
+    border-color: rgba(var(--accent-rgb),0.66) !important;
+    box-shadow: var(--pro-shadow-soft), 0 0 0 1px rgba(var(--accent-rgb),0.16) inset !important;
+}
+
+.mod-card {
+    transform-origin: center;
+}
+
+.mod-card:hover {
+    transform: translateY(-6px) !important;
+}
+
+.img-container,
+.card-img-wrap,
+.modal-banner,
+.featured-icon,
+.discord-icon-wrap,
+.email-icon-wrap,
+.logo-box {
+    border-radius: var(--pro-radius) !important;
+}
+
+.mod-name,
+.featured-title,
+.discord-title,
+.email-addr,
+.faq-title,
+.install-card-title h3 {
+    overflow-wrap: anywhere;
+}
+
+.search-bar,
+.search-input,
+.filter-group,
+.filter-pill,
+.category-scroll,
+.controls select,
+.controls input {
+    border-radius: var(--pro-radius) !important;
+}
+
+.search-bar:focus-within,
+.search-input:focus,
+.controls select:focus,
+.controls input:focus {
+    box-shadow: 0 0 0 3px rgba(var(--accent-rgb),0.18), var(--glow) !important;
+}
+
+.card-img,
+.img-container img,
+.modal-banner img,
+.gallery-thumb img {
+    background: rgba(0,0,0,0.22);
+}
+
+.settings-panel {
+    width: min(460px, 100vw) !important;
+}
+
+.settings-theme-row {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(62px, 1fr));
+    gap: 12px !important;
+}
+
+.theme-dot {
+    width: 34px !important;
+    height: 34px !important;
+}
+
+.font-options {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px !important;
+}
+
+.font-opt {
+    min-height: 42px;
+}
+
+.bncraft-active-nav {
+    color: var(--accent) !important;
+    background: var(--menu-item-hover) !important;
+}
+
+.bncraft-quick-dock {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 7600;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    pointer-events: none;
+}
+
+.bncraft-dock-btn {
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(var(--accent-rgb),0.32);
+    border-radius: var(--pro-radius);
+    background: rgba(7,12,18,0.82);
+    color: var(--text-main);
+    box-shadow: var(--pro-shadow-soft);
+    backdrop-filter: blur(14px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    pointer-events: auto;
+}
+
+[data-theme="white"] .bncraft-dock-btn,
+[data-theme="ice"] .bncraft-dock-btn,
+[data-theme="candy"] .bncraft-dock-btn {
+    background: rgba(255,255,255,0.86);
+}
+
+.bncraft-dock-btn:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.bncraft-dock-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.bncraft-toast-stack {
+    position: fixed;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    z-index: 9000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    pointer-events: none;
+}
+
+.bncraft-toast {
+    max-width: min(420px, calc(100vw - 32px));
+    padding: 12px 14px;
+    border-radius: var(--pro-radius);
+    border: 1px solid rgba(var(--accent-rgb),0.32);
+    background: rgba(7,12,18,0.92);
+    color: var(--text-main);
+    font-weight: 800;
+    font-size: 13px;
+    box-shadow: var(--pro-shadow-soft);
+    backdrop-filter: blur(14px);
+    opacity: 0;
+    transform: translateY(8px);
+    animation: bncraftToast 2.6s ease forwards;
+}
+
+[data-theme="white"] .bncraft-toast,
+[data-theme="ice"] .bncraft-toast,
+[data-theme="candy"] .bncraft-toast {
+    background: rgba(255,255,255,0.94);
+}
+
+@keyframes bncraftToast {
+    8%, 88% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(8px); }
+}
+
+.bncraft-command-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 8500;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 82px 18px 18px;
+    background: rgba(0,0,0,0.62);
+    backdrop-filter: blur(10px);
+}
+
+.bncraft-command-overlay.open {
+    display: flex;
+}
+
+.bncraft-command-modal {
+    width: min(680px, 100%);
+    border-radius: var(--pro-radius);
+    border: 1px solid rgba(var(--accent-rgb),0.32);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)),
+        var(--modal-bg);
+    box-shadow: var(--pro-shadow);
+    overflow: hidden;
+}
+
+.bncraft-command-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(var(--accent-rgb),0.2);
+}
+
+.bncraft-command-input-wrap svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 2;
+}
+
+.bncraft-command-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-main);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.bncraft-command-input::placeholder {
+    color: var(--text-label);
+}
+
+.bncraft-command-results {
+    max-height: min(480px, 58vh);
+    overflow-y: auto;
+    padding: 8px;
+}
+
+.bncraft-command-item {
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: var(--pro-radius);
+    background: transparent;
+    color: var(--text-main);
+    display: grid;
+    grid-template-columns: 36px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 12px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.bncraft-command-item:hover,
+.bncraft-command-item.active {
+    background: var(--menu-item-hover);
+    border-color: rgba(var(--accent-rgb),0.24);
+}
+
+.bncraft-command-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--pro-radius);
+    background: rgba(var(--accent-rgb),0.12);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bncraft-command-icon svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+
+.bncraft-command-title {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.bncraft-command-desc {
+    margin-top: 2px;
+    color: var(--text-label);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.bncraft-command-kbd {
+    font-size: 10px;
+    font-weight: 900;
+    color: var(--accent);
+    border: 1px solid rgba(var(--accent-rgb),0.28);
+    border-radius: 6px;
+    padding: 4px 7px;
+    background: rgba(var(--accent-rgb),0.08);
+}
+
+.bncraft-home-pro {
+    width: min(980px, 100%);
+    margin: 32px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.bncraft-home-card {
+    min-height: 118px;
+    border: 1px solid rgba(var(--accent-rgb),0.22);
+    border-radius: var(--pro-radius);
+    background:
+        linear-gradient(180deg, var(--pro-surface), rgba(255,255,255,0.02)),
+        var(--card-bg);
+    padding: 16px;
+    text-align: left;
+    color: var(--text-main);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bncraft-home-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: var(--pro-shadow-soft);
+}
+
+.bncraft-home-card strong {
+    font-size: 22px;
+    line-height: 1;
+    color: var(--accent);
+}
+
+.bncraft-home-card span {
+    font-size: 13px;
+    line-height: 1.45;
+    color: var(--pro-ink-soft);
+    font-weight: 700;
+}
+
+.bncraft-service-strip {
+    width: min(880px, 100%);
+    margin: 22px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.bncraft-service-link {
+    min-height: 72px;
+    border: 1px solid rgba(var(--accent-rgb),0.2);
+    border-radius: var(--pro-radius);
+    background: rgba(255,255,255,0.045);
+    color: var(--text-main);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+}
+
+.bncraft-service-link:hover {
+    border-color: var(--accent);
+    background: var(--menu-item-hover);
+}
+
+.bncraft-service-link img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+.bncraft-service-link strong {
+    display: block;
+    font-size: 14px;
+}
+
+.bncraft-service-link span {
+    display: block;
+    margin-top: 2px;
+    color: var(--text-label);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.bncraft-mod-toolbar {
+    width: min(1200px, 95%);
+    margin: 0 auto 18px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bncraft-tool-btn {
+    border: 1px solid rgba(var(--accent-rgb),0.24);
+    border-radius: var(--pro-radius);
+    background: var(--pro-surface);
+    color: var(--text-main);
+    min-height: 42px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 900;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.bncraft-tool-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    background: var(--menu-item-hover);
+}
+
+.bncraft-tool-btn svg {
+    width: 17px;
+    height: 17px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+html.bncraft-density-compact .mod-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+    gap: 14px !important;
+}
+
+html.bncraft-density-compact .mod-info {
+    padding: 14px !important;
+}
+
+html.bncraft-density-compact .mod-desc-preview,
+html.bncraft-density-compact .card-desc,
+html.bncraft-density-compact .card-studio {
+    display: none !important;
+}
+
+.bncraft-help-services {
+    width: min(960px, calc(100% - 32px));
+    margin: 0 auto 34px;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(var(--accent-rgb),0.24);
+    border-radius: var(--pro-radius);
+    background:
+        linear-gradient(180deg, var(--pro-surface), rgba(255,255,255,0.025)),
+        var(--card-bg);
+    box-shadow: var(--pro-shadow-soft);
+    overflow: hidden;
+}
+
+.bncraft-help-services-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px;
+    border-bottom: 1px solid rgba(var(--accent-rgb),0.18);
+}
+
+.bncraft-help-services-head h2 {
+    margin: 0 0 4px;
+    font-size: 22px;
+    line-height: 1.1;
+}
+
+.bncraft-help-services-head p {
+    margin: 0;
+    color: var(--pro-ink-soft);
+    font-weight: 700;
+    line-height: 1.45;
+    font-size: 13px;
+}
+
+.bncraft-service-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.bncraft-service-tab {
+    border: 1px solid rgba(var(--accent-rgb),0.24);
+    border-radius: var(--pro-radius);
+    background: rgba(var(--accent-rgb),0.08);
+    color: var(--text-main);
+    min-height: 38px;
+    padding: 0 12px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.bncraft-service-tab.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #000;
+}
+
+.bncraft-service-panel {
+    display: none;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 18px;
+    padding: 18px;
+}
+
+.bncraft-service-panel.active {
+    display: grid;
+}
+
+.bncraft-service-card {
+    border: 1px solid rgba(var(--accent-rgb),0.18);
+    border-radius: var(--pro-radius);
+    background: rgba(255,255,255,0.045);
+    padding: 16px;
+}
+
+.bncraft-service-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.bncraft-service-brand img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    border-radius: var(--pro-radius);
+    background: rgba(0,0,0,0.16);
+}
+
+.bncraft-service-brand h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.bncraft-service-brand span {
+    display: block;
+    margin-top: 2px;
+    color: var(--text-label);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.bncraft-service-card p {
+    color: var(--pro-ink-soft);
+    line-height: 1.6;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.bncraft-service-steps {
+    display: grid;
+    gap: 10px;
+}
+
+.bncraft-service-step {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 10px;
+    align-items: start;
+    border: 1px solid rgba(var(--accent-rgb),0.16);
+    border-radius: var(--pro-radius);
+    background: rgba(0,0,0,0.12);
+    padding: 12px;
+}
+
+.bncraft-service-num {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--pro-radius);
+    background: rgba(var(--accent-rgb),0.14);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.bncraft-service-step strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 13px;
+}
+
+.bncraft-service-step span {
+    display: block;
+    color: var(--text-label);
+    font-size: 12px;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+.bncraft-copy-steps {
+    margin-top: 12px;
+    width: 100%;
+    min-height: 40px;
+    border: 1px solid rgba(var(--accent-rgb),0.24);
+    border-radius: var(--pro-radius);
+    background: var(--accent);
+    color: #000;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.bncraft-help-search {
+    width: min(860px, calc(100% - 32px));
+    margin: -12px auto 26px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(var(--accent-rgb),0.26);
+    border-radius: var(--pro-radius);
+    background: var(--card-bg);
+    padding: 10px 12px;
+}
+
+.bncraft-help-search svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--accent);
+    fill: none;
+    stroke-width: 2;
+}
+
+.bncraft-help-search input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.bncraft-hidden-by-help-search {
+    display: none !important;
+}
+
+.bncraft-links-share {
+    margin: -12px auto 30px;
+    max-width: 560px;
+    padding: 0 20px;
+}
+
+.bncraft-share-card {
+    border: 1px solid rgba(var(--accent-rgb),0.22);
+    border-radius: var(--pro-radius);
+    background: var(--pro-surface);
+    min-height: 56px;
+    width: 100%;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 900;
+}
+
+.bncraft-share-card:hover {
+    border-color: var(--accent);
+    background: var(--menu-item-hover);
+}
+
+.bncraft-share-card svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+
+@media (max-width: 860px) {
+    .bncraft-home-pro,
+    .bncraft-service-strip {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bncraft-service-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .bncraft-help-services-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2.35rem !important;
+    }
+
+    .help-hero h1,
+    .header-title {
+        font-size: 2.1rem !important;
+    }
+
+    .font-options {
+        grid-template-columns: 1fr;
+    }
+
+    .bncraft-home-pro,
+    .bncraft-service-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .bncraft-quick-dock {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .bncraft-dock-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .bncraft-toast-stack {
+        bottom: 10px;
+    }
+
+    .bncraft-command-overlay {
+        padding-top: 62px;
+    }
+
+    .bncraft-command-item {
+        grid-template-columns: 32px 1fr;
+    }
+
+    .bncraft-command-kbd {
+        display: none;
+    }
+
+    .bncraft-service-tabs {
+        width: 100%;
+    }
+
+    .bncraft-service-tab {
+        flex: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.05s !important;
+    }
+}
