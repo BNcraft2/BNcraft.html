@@ -31,8 +31,11 @@
     showDescPreview: false
   };
 
-  const THEMES = ['blue', 'purple', 'red', 'green', 'yellow', 'orange', 'white', 'grayscale', 'pink'];
-  const FONTS = ['default', 'minecraft', 'alt', 'mono', 'rounded'];
+  const THEMES = [
+    'blue', 'purple', 'red', 'green', 'yellow', 'orange', 'white', 'grayscale', 'pink',
+    'aurora', 'cyber', 'emerald', 'volcano', 'ice', 'sunset', 'royal', 'matrix', 'candy', 'midnight'
+  ];
+  const FONTS = ['default', 'minecraft', 'alt', 'mono', 'rounded', 'display', 'tech', 'headline', 'clean', 'condensed', 'code'];
 
   function getSettings() {
     try {
@@ -323,10 +326,19 @@
       THEMES.forEach((t) => {
         const wrap = document.createElement('div');
         wrap.className = 'theme-dot-wrap';
+        wrap.setAttribute('role', 'button');
+        wrap.setAttribute('tabindex', '0');
+        wrap.setAttribute('aria-label', 'Theme ' + t);
+        wrap.onclick = () => setTheme(t);
+        wrap.onkeydown = (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            setTheme(t);
+          }
+        };
         const dot = document.createElement('div');
         dot.className = 'theme-dot';
         dot.setAttribute('data-t', t);
-        dot.onclick = () => setTheme(t);
         const lbl = document.createElement('div');
         lbl.className = 'theme-dot-lbl';
         lbl.textContent = t.charAt(0).toUpperCase() + t.slice(1);
@@ -346,7 +358,13 @@
         { id: 'minecraft', label: 'Minecraft' },
         { id: 'alt', label: 'Outfit' },
         { id: 'mono', label: 'Space Mono' },
-        { id: 'rounded', label: 'Nunito' }
+        { id: 'rounded', label: 'Nunito' },
+        { id: 'display', label: 'Orbitron' },
+        { id: 'tech', label: 'Rajdhani' },
+        { id: 'headline', label: 'Exo 2' },
+        { id: 'clean', label: 'Poppins' },
+        { id: 'condensed', label: 'Barlow' },
+        { id: 'code', label: 'JetBrains Mono' }
       ].forEach((f) => {
         const btn = document.createElement('button');
         btn.type = 'button';
